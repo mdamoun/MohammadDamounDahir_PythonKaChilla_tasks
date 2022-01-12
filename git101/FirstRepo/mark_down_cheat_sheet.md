@@ -364,4 +364,5 @@ ___
 
 
 
-* This file was uploaded on Github via Fork and is currently opened and editied as part of GitHub Training on GitHub
+1. This file was uploaded on Github via Fork and is currently opened and editied as part of GitHub Training on GitHub
+2. The Git101 course was conducted by Qurat ul ain Ali
