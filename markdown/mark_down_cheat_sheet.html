@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>mark_down_cheat_sheet.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="table-of-contents">Table of Contents</h1>
+<p><a href="#1-headings">1- Heading</a><br>
+<a href="#2-block-of-wordscitation">2- Block of Words/Citation</a><br>
+<a href="#3-line-breaks">3- Line Break</a><br>
+<a href="#4-combining-two-things">4- Combining Two Things</a><br>
+<a href="#5-face-of-the-text-text-formating">5- Text Formatting</a><br>
+<a href="#6-creating-bullet-points-and-list">6- Creating Bullet Points and Number Lists</a><br>
+<a href="#7-line-break-or-page-break">7- Line Break or Page Break</a><br>
+<a href="#8-links-and-hyperlinks-in-markdown">8- Links and Hyperlinks in Markdown</a><br>
+<a href="#9-images-and-figures-with-links">9- Images and Figures with Links</a><br>
+<a href="#10-how-to-add-your-code-code-block-in-a-markdown-file">10- How to add code within text or as a Code Block</a><br>
+<a href="#11-creating-tables-in-your-markdown-file">11- Creating Tables</a><br>
+<a href="#12-installing-useful-markdown-extentions">12- Installing usefull Markdown extentions for Visiual Studio Code</a><br>
+<a href="#13-creating-tables-of-contents-in-your-markdown-file">14- Creating this TOC</a></p>
+<hr>
+<h1 id="1-headings">1. Headings</h1>
+<p>How to create headings in markdown files?</p>
+<h1 id="heading-1">Heading 1</h1>
+<h2 id="heading-2">Heading 2</h2>
+<h3 id="heading-3">Heading 3</h3>
+<h4 id="heading-4">Heading 4</h4>
+<h5 id="heading-5">Heading 5</h5>
+<h6 id="heading-6">Heading 6</h6>
+<p>^ There are 6 levels of Heading options available to be used.</p>
+<hr>
+<h1 id="2-block-of-wordscitation">2. Block of Words/Citation</h1>
+<p>How to add block of words in markdown document?</p>
+<p>This is a notmal text in markdown document.</p>
+<blockquote>
+<p>This is a block of special text written in markdown document. You needt to open the .md file to see that a special character '&gt;' is been used at the begining of the sentence to get this result.</p>
+</blockquote>
+<blockquote>
+<p>This is second line of special text created by using a <em><b>double-return</b></em> key to create a seprate block!</p>
+<p>To have the continutiy of this block with a new line of sentence,  use '&gt;' at the begining of the empty space between these lines then followed by '&gt;' at the begining of the next sentence.</p>
+<p>Still confused?</p>
+<p>Well, open the .md file and see how its been done. <img class="emoji" alt="smiley" src="data:image/png;base64,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" /></p>
+</blockquote>
+<hr>
+<h1 id="3-line-breaks">3. Line Breaks</h1>
+<p>This is an intentional text line so that we can create a line break at the end of it.
+Now this is a second line. I like you to notice something in the simple text editor. All the text written are in a single line unless &quot;enter&quot; key is been used to create a seprate line. So do observe that when you open a markdown file.</p>
+<p>Now there is another way to create a &quot;line break&quot;. And that is by using a &quot;reverse slash&quot;at the end of the sentence.</p>
+<hr>
+<h1 id="4-combining-two-things">4. Combining 'Two' Things</h1>
+<p>Lets combine <b> Blocks of words and heading</b>.</p>
+<blockquote>
+<h1 id="you-asked-how">You asked How?</h1>
+</blockquote>
+<blockquote>
+<h2 id="its-actual-quite-simple">Its actual quite simple</h2>
+</blockquote>
+<blockquote>
+<p>Well we did that by using '&gt;#' and '&gt;##' signs at the begining. Its as simple as that. Do check it out.</p>
+</blockquote>
+<hr>
+<h1 id="5-face-of-the-text-text-formating">5. Face of the text (Text Formating)</h1>
+<h2 id="making-text-bold">Making text <strong>Bold</strong></h2>
+<p>Now you asked how to make text <strong>Bold</strong>? Well there are actually two ways.</p>
+<ol>
+<li>You can either add <em>double</em> asterisk at the begining and end like <strong>this word</strong>. Or</li>
+<li>Using <em>double</em> underscore '__'<strong>at the begning and the end of your text</strong>. Or</li>
+<li>By using html code. That is <em>bracketing</em>  your text between &lt; b&gt; and &lt; /b&gt; <b>just like this</b>. Remember not to have spaces inside the &lt;&gt;.</li>
+</ol>
+<h2 id="making-text-italic">Making text <em>Italic</em></h2>
+<p>Now you asked how to make text <em>Italic</em>? Well there are two ways to do it.</p>
+<ol>
+<li>You can either add <em>single</em> asterisk at the begining and end like <em>this word</em>. Or</li>
+<li>Using <em>single</em> underscore '_'<em>at the begning and the end of your text</em>. Or</li>
+<li>By using html code. That is <em>bracketting</em>  your text between &lt; i&gt; and &lt; /i&gt; <i>just like this</i>. Remember not to have spaces inside the &lt;&gt;.</li>
+</ol>
+<h2 id="making-text-both-bold-and-italic">Making text both <em><strong>Bold and Italic</strong></em></h2>
+<ol>
+<li>Well you guessed it right <em>(If you did already)</em>. Used add <em>triple</em> asterisk at <em><strong>the beginning and at the end of the text you like to have</strong></em>.</li>
+<li>The second method is <b><i>combination of html code added at the both ends</i></b>.</li>
+</ol>
+<p>Frankly using <em><strong>Asterisks</strong></em> are much easier and fun!</p>
+<hr>
+<h1 id="6-creating-bullet-points-and-list">6. Creating bullet points and list</h1>
+<h2 id="bullet-points">Bullet Points</h2>
+<p>To create a bullet use '- ' i.e. a <strong>hyphen and space</strong> before your text.</p>
+<ul>
+<li>
+<p>This is an example by using the instruction above.</p>
+<ul>
+<li>You can further use <em><strong>Tab and '- '</strong></em> to create nested bullet point.
+<ul>
+<li>Here comes another one.
+<ul>
+<li>Lets see if there is one more. Yes we can do that but do notice that the shape of the bullet remains same as the third one above.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Using <em><strong>'Shift + Tab' &amp; 'Tab'</strong></em> on the next line makes you move in between the nested 'Bullet Points' while using the '- ' before your text.</p>
+</li>
+<li>
+<p>Well thats awsome!</p>
+</li>
+<li>
+<p>One thing more. This bullet was created using '* ' <strong>asterisk and space</strong>.</p>
+</li>
+<li>
+<p>And you can also create bullet using '+ ' <strong>plus and space</strong>.</p>
+</li>
+</ul>
+<blockquote>
+<h2 id="summary">Summary</h2>
+</blockquote>
+<blockquote>
+<p>To create bullet points, you can use.<br>
+'- ' hypen with space<br>
+'* ' asterisk with space and<br>
+'+ ' plus sign with space</p>
+</blockquote>
+<p>Now lets move to our next topic.</p>
+<h2 id="number-list">Number List</h2>
+<p>To create a number listing use '1. ' i.e. a <strong>hnumber, fullstop, and than space</strong> before your text.</p>
+<ol>
+<li>This is an example by using the instruction above.</li>
+<li>We can continue making our list by adding next sequence of the number followed by fullstop and space before the text.</li>
+<li>Now here is a surprise for you. You cannot see it here, but in the markddown file of this document, I have used 1. for the third line instead of 3. at the begining of the number list.</li>
+<li>The fun part of using markdown is that irrepective this being the 4th line, I have still used 1. and the markdown interpretator has automatically fixed my mistake to the actual sequence of the order.
+<ol>
+<li>Now in order to create a nested list, just use a tab and '1. ' i.e. a <strong>hnumber, fullstop, and than space</strong> before your text.</li>
+<li>Thats it!</li>
+<li>Its that simple.</li>
+<li>And the fun part.</li>
+<li>I am using &quot;1. &quot; since the 3rd nested list.
+<ol>
+<li>May be one more example of nested number list.</li>
+<li>I guess this should be enough of it.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Again I have used <em><strong>'Shift + Tab' and Tab'</strong></em> to navigate through the list.</li>
+<li>I guess we can conclude the <em>Number List</em> here. Hope you enjoyed it.</li>
+</ol>
+<hr>
+<h1 id="7-line-break-or-page-break">7. Line Break or Page Break</h1>
+<p>To create a page break one way is to press 'return' or 'enter' key twice (2) after the fullstop and then add three (3) consective hypens '---' between this line and the next one. Then another 'return' or 'enter' key to start the new line after the line break.</p>
+<hr>
+<p>This is the second line after the page break.</p>
+<p>Another way is to use three (3) consective underscore '___' on the next line instead of three (3) hyphens.</p>
+<hr>
+<p>The third way is to use three (3) consective asterisk '***' on the next line instead of three (3) hyphens or three (3) underscore. Just like the one below.</p>
+<hr>
+<p>This is pretty much it about the <strong>Line Break</strong> or <strong>Page Break</strong>.</p>
+<hr>
+<h1 id="8-links-and-hyperlinks-in-markdown">8. Links and Hyperlinks in Markdown</h1>
+<h2 id="a-hyperlink">a. Hyperlink</h2>
+<p>To create a <strong>hyperlink</strong>, just put your link (web address) between the &lt;&gt;.<br>
+Here is an example using the technique above to a create link to google.com. <a href="https://www.google.com/">https://www.google.com/</a></p>
+<h2 id="b-link">b. Link</h2>
+<p>To create a link with replaced text, you need to write [your text] in a square bracket immediately followed by the desired link in a round bracket (the correct http link).</p>
+<p>Here is an example:</p>
+<p><a href="https://www.youtube.com/watch?v=QvPekMN4F0w&amp;list=PL9XvIvvVL50HVsu-Ao8NBr0UJSO8O6lBI">To learn <strong>FREE</strong> Markdown and Python course in 40 days in Urdu language, click here!</a> Courtesy of <a href="https://www.codanics.com/">Codanics</a> by <a href="https://www.linkedin.com/in/dr-muhammad-aammar-tufail-02471213b/">Dr. Muhammad Aammar Tufail</a>.</p>
+<h2 id="creating-a-defined-link-to-be-recalled-within-the-markdown-file">Creating a defined link to be recalled within the Markdown file</h2>
+<p>For that, use your [desired text] in square bracket immediately followed by colon':' followed by your hyperlink without any bracket. Below I have created an example visible to you.</p>
+<p>[Codanic s] : <a href="https://www.codanics.com/">https://www.codanics.com/</a></p>
+<ul>
+<li>In reality, once the link is been defined, it is not really visible while viewing the Markdown file.</li>
+</ul>
+<p>But it can be recalled anywhere in the document as example below.</p>
+<blockquote>
+<p>Example</p>
+</blockquote>
+<p>What you can see here is that I have created the following <a href="https://www.codanics.com/">link</a> for you to visit.</p>
+<hr>
+<h1 id="9-images-and-figures-with-links">9. Images and figures with links</h1>
+<p>To put an image in a markdown document is easy as a breeze. The concept is same as of putting a <em>link</em> or a <em>hyperlink</em> but more as of local one.</p>
+<h2 id="a-loading-a-local-image">a. Loading a local image</h2>
+<p>We start with an exclamation mark '!' immediately followed by a square bracket [with the desired name tag] followed by the (filename.ext) next to it. In this case I will make sure the image file is in the same folder as of the markdown file.</p>
+<p>! [Given Tag name] ( imagename.ext )</p>
+<p>Just make sure that all above are written without spaces inbetween them.</p>
+<blockquote>
+<p>Example</p>
+</blockquote>
+<p>If you like to find out more about me, scan this QR code to visit my <strong>Linkdin</strong> profile.</p>
+<p><img src="myLinkedinQR.png" alt="QR"></p>
+<h2 id="b-loading-an-online-image">b. Loading an online image</h2>
+<p>In the case of online image, everything is same as above except instead of the (filename.ext), we will use the url of that particular image in the round bracket.</p>
+<p>! [Given Tag name] ( httpe://image/url/imagename.ext )</p>
+<blockquote>
+<p>Example</p>
+</blockquote>
+<p>So here is the logo of univeristy I gratuated from. In this example, I used their logo https:// link to load it in this markdown file.</p>
+<p><img src="https://www.alliancembs.manchester.ac.uk/media/ambs/content-assets/images/alliance-manchester-business-school-1-1.png" alt="MBCLogo"></p>
+<h1 id="10-how-to-add-your-code-code-block-in-a-markdown-file">10. How to Add (Your) Code [CODE BLOCK] in a Markdown file</h1>
+<h2 id="a-share-a-code-in-between-your-text">a. Share a code in between your text</h2>
+<p>To start with lets say you like to share a code or refer a code in between your sentence for that you will use</p>
+<p>&quot; ` &quot;  <em>inverse tick</em> on both sides of the code which will make the code color change.</p>
+<blockquote>
+<p>Example</p>
+</blockquote>
+<p>Here is an example of displaying &quot;Hello World!&quot; by using the <strong>print()</strong> command in Python.</p>
+<p>For that you need to write <code>print(&quot;Hello world!&quot;)</code> at the Python terminal.</p>
+<p>This is how it will look like</p>
+<p>| &gt;&gt;&gt; <code>print(&quot;Hello world!&quot;)</code><br>
+| <code>Hello world!</code></p>
+<h2 id="b-share-a-code-in-a-code-block">b. Share a code in a Code Block</h2>
+<p>In order to do so, you need to use triple <em>inverse tick</em> at the begining and at the end of your code.</p>
+<p>Use &quot; ``` &quot;  <em>inverse tick</em> before your code starts and below where your code ends.</p>
+<blockquote>
+<p><strong>IMPORTANT FEATURE:</strong></p>
+<p>In order to give a relavent code and fucntion color based on the programming language been used, write the name of the languge after the &quot; ``` &quot; <em>inverse tick</em> while opening for the box for your code.</p>
+<p>For example &quot;```Python&quot;</p>
+</blockquote>
+<blockquote>
+<p><strong>CODE BOX Example</strong></p>
+</blockquote>
+<p>Here is a code to create a bar chart with Python using <em><strong>Seaborn</strong></em> library and using <em><strong>Titanic</strong></em> data installed with the <em><strong>Seaborn</strong></em>.</p>
+<blockquote>
+<p>Example</p>
+</blockquote>
+<pre class="hljs"><code><div><span class="hljs-comment"># Titanic Survivor Plot</span>
+<span class="hljs-comment"># x- axis = sex, y-axis = survived</span>
+
+<span class="hljs-comment">#Step:1 Import the graphic libraries</span>
+<span class="hljs-keyword">import</span> seaborn <span class="hljs-keyword">as</span> sns 
+<span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt 
+
+<span class="hljs-comment">#Step:2 Set the theme</span>
+sns.set_theme(style=<span class="hljs-string">"ticks"</span>, color_codes=<span class="hljs-literal">True</span>) 
+
+<span class="hljs-comment">#Step:3 import/loading the 'titanic' data installed with Seaborn</span>
+titanic = sns.load_dataset(<span class="hljs-string">"titanic"</span>)
+
+<span class="hljs-comment">#Step:4 assigning specific columns in the 'titanic' data to various features of the graph; like the x-axis, y-axis, color(hue), type of graph to plot and the data source</span>
+
+sns.catplot(x=<span class="hljs-string">"sex"</span>, y=<span class="hljs-string">"survived"</span>, hue=<span class="hljs-string">"class"</span>, kind=<span class="hljs-string">"bar"</span>, data=titanic) 
+
+<span class="hljs-comment">#Step:5 Command to plot the graph</span>
+plt.show()
+</div></code></pre>
+<hr>
+<h1 id="11-creating-tables-in-your-markdown-file">11. Creating Tables in your Markdown file</h1>
+<p>For creating tables in madrkdown, we use pipe '|' and hypen '-' to create box in a curde form. Make a crude column and rows and fill them in. Markdown will automatically create a presentable table for you. You can also use the text formating (what you have learned above) to get desired effect.</p>
+<p>Here is how you can do it.</p>
+<blockquote>
+<p>Step 1: Create the Heading row as below:</p>
+</blockquote>
+<p>| Heading 1 | Heading 2 | Heading 3 |...|</p>
+<blockquote>
+<p>Step 2: Create Colmun Row filled with &quot;----&quot; based on number of Headings underneath the Heading row. You can use as much as 'hyphen' as you like based on your esthatic sense. Three or four are enough for markdown to know.</p>
+</blockquote>
+<p>| ---- | ----| --- |...|</p>
+<blockquote>
+<p>Step 3: Start filling the data based on the number of your Headings</p>
+</blockquote>
+<p>| Data1 | 123.45| xyz |...|<br>
+| Data2 | 123.45| xyz |...|<br>
+| Data3 | 123.45| xyz |...|<br>
+| Data4 | 123.45| xyz |...|<br>
+| Data5 | 123.45| xyz |...|<br>
+| Data6 | 123.45| xyz |...|<br>
+........... and so on.</p>
+<blockquote>
+<p>Step 4: Data alignment in the columns</p>
+</blockquote>
+<p>Remember we made a <em>&quot;Column Row&quot;</em> under the Headings in our Step 2? We will insert colon ':' on the extreme side of the 'hypen' to make the text under the heading <em><strong>Left</strong></em>, <em><strong>Right</strong></em>, and <em><strong>Center</strong></em> justified.</p>
+<p>This is how you do it. Just notice the postion of the colon ':'.</p>
+<p>| :---- | :----| :--- |...| &lt;- All text below it will be Left Justified.</p>
+<p>| :----: | :----<img class="emoji" alt="neutral_face" src="data:image/png;base64,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" /> :---: |...| &lt;- All text below it will be Centered.</p>
+<p>| ----: | ----<img class="emoji" alt="neutral_face" src="data:image/png;base64,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" /> ---: |...| &lt;- All text below it will be Right Justified.</p>
+<p>Do your own experiment to get the gist of it.</p>
+<p>Now below is an example as how your table will look like once you put all of them together.</p>
+<blockquote>
+<p><strong>Working Example:</strong> A 4 rows x 3 column Table</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Species</th>
+<th style="text-align:center">Petal length</th>
+<th style="text-align:center">Sepal length</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Virginica</strong></td>
+<td style="text-align:center">18.2</td>
+<td style="text-align:center">19.2</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Setosa</strong></td>
+<td style="text-align:center">15.1</td>
+<td style="text-align:center">17.2</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Versicolor</strong></td>
+<td style="text-align:center">12.2</td>
+<td style="text-align:center">12.2</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="12-installing-useful-markdown-extentions">12. Installing useful Markdown <em>extentions</em></h1>
+<p>Here are some useful Markdown extentions for your <strong>Visiual Studio Code</strong></p>
+<ol>
+<li>Markdown All in One</li>
+<li>Markdown PDF</li>
+<li>markdownlint</li>
+<li>Markdown Shortcuts</li>
+</ol>
+<h1 id="13-creating-tables-of-contents-in-your-markdown-file">13. Creating Tables of Contents in your Markdown file</h1>
+<p>Its time for you to open this Markdown file and find out how this Table of Content is been made.</p>
+<h1 id="table-of-contents">Table of Contents</h1>
+<p><a href="#1-headings">1- Heading</a><br>
+<a href="#2-block-of-wordscitation">2- Block of Words/Citation</a><br>
+<a href="#3-line-breaks">3- Line Break</a><br>
+<a href="#4-combining-two-things">4- Combining Two Things</a><br>
+<a href="#5-face-of-the-text-text-formating">5- Text Formatting</a><br>
+<a href="#6-creating-bullet-points-and-list">6- Creating Bullet Points and Number Lists</a><br>
+<a href="#7-line-break-or-page-break">7- Line Break or Page Break</a><br>
+<a href="#8-links-and-hyperlinks-in-markdown">8- Links and Hyperlinks in Markdown</a><br>
+<a href="#9-images-and-figures-with-links">9- Images and Figures with Links</a><br>
+<a href="#10-how-to-add-your-code-code-block-in-a-markdown-file">10- How to add code within text or as a Code Block</a><br>
+<a href="#11-creating-tables-in-your-markdown-file">11- Creating Tables</a><br>
+<a href="#12-installing-useful-markdown-extentions">12- Installing usefull Markdown extentions for Visiual Studio Code</a><br>
+<a href="#13-creating-tables-of-contents-in-your-markdown-file">14- Creating this TOC</a></p>
+
+</body>
+</html>
