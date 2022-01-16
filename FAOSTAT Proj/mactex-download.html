@@ -1,0 +1,393 @@
+<!-- $Id: header.html,v 1.2 2020/11/27 18:46:49 karl Exp $ -->
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="/tugstyle.css">
+<!-- end header -->
+
+<title>MacTeX - TeX Users Group</title>
+<link rel="stylesheet" href="./tugstylemactex.css">
+</head><body>
+
+<STYLE type="text/css">
+A:link { text-decoration: none }
+A:active { text-decoration: none }
+A:visited { text-decoration: none }
+A:hover {text-decoration: underline;}
+BODY {
+  margin-top: 0px;
+  margin-right: 30px;
+  margin-bottom: 0px;
+  margin-left: 30px;
+  font-family: serif;
+}
+ </STYLE>
+
+
+<table width=100%>
+<tr>
+<td>
+
+<img align="left" border=0 src="./images/mactexlogoX5.png">
+</td>
+<td align='center'>
+&nbsp;
+</td>
+<td><A TARGET="hwin" HREF="http://www.tug.org">
+    <img valign="top" align="right" border=0 alt="logonavy"
+    SRC="images/logonavy.jpg" WIDTH="80"></A>
+</td>
+</tr>
+</table>
+<hr>
+<p align="center">
+<small><a href="http://www.tug.org/mactex/index.html">MacTeX</a></small>
+&nbsp;|&nbsp;
+<small><a href="http://www.tug.org/mactex/donate.html">Donate</a></small>
+&nbsp;|&nbsp;
+<small><a href="http://www.tug.org/mactex/faq/index.html">FAQ</a></small>
+&nbsp;|&nbsp;
+<small><a href="http://www.tug.org/mactex/gettinghelp.html">Help</a></small>
+&nbsp;|&nbsp;
+<small><a href="https://tug.org/">TUG</a></small>
+
+</p>
+
+<!-- Note that these links go to the existing pages, not the pages being edited! So all is well if the following
+	edited pages are OK:
+	
+		donate.html
+		index.html -> faq.html
+		gettinghelp.html
+-->
+
+<BR>
+<BR>
+<BR>
+<DIV ALIGN='center'>
+<FONT COLOR="#aa9922" SIZE="+2"><B>Downloading MacTeX 2021</B></FONT>
+<BR>
+<BR>
+<HR WIDTH="43%">
+</DIV>
+<BR>
+
+<TABLE ALIGN='CENTER'  BORDER='0'  CELLSPACING=0 >
+<TR><TD ALIGN='CENTER'>
+To obtain the distribution, click the link below.
+<TR><TD ALIGN='CENTER'>All install packages are  developer-signed and notarized by Apple.
+<TR><TD ALIGN='CENTER'>While downloading, please skim read the rest of the page.
+<TR><TD ALIGN='CENTER'>Users who run into trouble often write us without noticing that the solution is on this very page.   
+<BR>
+<BR>
+<TR><TD ALIGN='CENTER'>MacTeX-2021 requires macOS  10.14, 10.15, 11 or 12
+<TR><TD ALIGN='CENTER'> Mojave, Catalina, Big Sur, or Monterey 
+<TR><TD ALIGN='CENTER'> and runs natively on both Arm and Intel machines.
+<BR>
+<BR>
+<!--
+<a href="http://tug.org/cgi-bin/mactex-download/MacTeX.pkg">
+-->
+<a href="https://mirror.ctan.org/systems/mac/mactex/MacTeX.pkg">
+<b>MacTeX.pkg</b></a>
+<BR>
+<BR>
+<small>
+[ approximately  
+4.4G	- 29 March 2021
+
+]
+<BR>
+The MD5 sum is <b>
+327168dcc3036603eccce226cb7fadf9
+ 
+</b>
+<BR>
+The SHA256 sum is <b>e541257d70f911550341853709fc45d9fa9fcd4c93058382000ebb19b284833b
+</b>
+<BR>
+The SHA512 sum is <b>05d6e46347feb07bd9fed8ff1bfa855059a8fcf2c452fd832e0db1e15b5c171a2f86b5b911c37166dd
+19cfaba4f6e7fa4ea9f46c322f87f02f2b411bd1c54852
+</b>
+<BR>
+ Download with Safari <I>strongly recommended</I> 
+<BR>
+</small>
+<BR>
+</DIV>
+<BR>
+<!--
+<DIV ALIGN='center'>
+<FONT COLOR="#aa9922" SIZE="+2"><B>Special Notes for Catalina</B></FONT>
+<BR>
+<BR>
+<HR WIDTH="43%">
+</DIV>
+<BR>
+
+<TR><TD ALIGN='LEFT'>
+<BR>
+MacTeX-2020 works fine on Catalina.  When Catalina was first released to developers, Apple said that install packages for Catalina must be notarized and software installed must adopt a hardened runtime. However, Apple did not turn on this Catalina requirement until Feb 3, 2020, so most MacTeX-2019 users did not have to deal with notarization.  All MacTeX-2020 install packages are appropriately notarized. <BR>
+<BR>
+
+</small>
+</div>
+-->
+<TR><TD ALIGN='LEFT'>
+<BR>
+<DIV ALIGN='center'>
+<FONT COLOR="#aa9922" SIZE="+2"><B>Installing MacTeX</B></FONT>
+<BR>
+<BR>
+<HR WIDTH="43%">
+</DIV>
+<BR>
+All binaries in MacTeX-2021 are universal, with code for both Arm and Intel processors. The same source code is used to compile both types of code, so Apple's Arm and Intel machines are on exactly the same footing.
+<BR>
+<BR>
+After downloading, move the file MacTeX.pkg to the desktop or another convenient spot,
+and double click it to install.  Follow the straightforward instructions. Installation on a recent Macintosh
+takes about ten minutes. When installation is complete, go to /Applications/TeX and read the document
+READ ME FIRST installed there, which explains how to find and use LaTeX. A copy of this document is available
+<a href="./READ_ME_FIRST.pdf"><b>here</b></a>.
+<BR>
+<BR>
+The installer  presents a Welcome page. Then it presents a ReadMe page with more information.
+It presents a Software License page, and then a Final Page; clicking the "Install" button on this page will start the actual installation. The final page also has a ''Customize" button, which leads to a panel allowing users to decide which pieces to install: Ghostscript, the Ghostscript Library, the GUI applications, and TeX Live itself.  Most users will take the standard installation and ignore "Customize". Users who use MacPorts or HomeBrew may prefer to use the Ghostscript provided by these projects; if so they should use "Customize" to disable Ghostscript installation.
+<BR>
+<BR>
+At the end of installation, the installer will report "Success." But sometimes, the installer puts up a dialog saying "Verifying..." and then the install hangs. In all cases known to us, rebooting the Macintosh fixes this problem. After the reboot, install again.
+<BR>
+<BR> 
+If other problems are reported during installation, skip to the section "Installation Errors" below.
+<BR>
+<BR>
+MacTeX writes a symbolic link /Library/TeX/texbin which indirectly points to the TeX Live binary directory. Configure your GUI programs 
+to use this link. The GUI programs we supply should automatically configure themselves. On older systems, you may have seen the link /usr/texbin
+which did the same thing.  When Apple produced El Capitan, they modified the system so users could no longer write directly to  the /usr directory and this rule remains in effect today.  Therefore we replaced /usr/texbin with /Library/TeX/texbin.
+<BR>
+<BR>
+MacTeX installs TeX Live, the actual TeX Distribution, in /usr/local/texlive/2021, a location often hidden in the Finder. Typical users access TeX using a "front end", a program providing an editor to enter TeX source and a preview window to view the typeset output. MacTeX installs the front end TeXShop in /Applications/TeX and most people will access TeX using that front end or a similar one. MacTeX installs a file called READ-ME-FIRST in ``/Applications/TeX/Docs and Spell Utilities''. This file explains how to start TeXShop and enter and then typeset a  short sample document.<BR>
+<BR>
+MacTeX does not overwrite the TeX Distribution from the previous year. Users who run into trouble can switch to the previous distribution until the new distribution is fixed. Long ago we installed a Preference Pane which could do this switching, but this functionality is now in TeX Live Utility, which should be in /Applications/TeX. To switch, use the Configure menu item "Select Default TeX Live Version." <BR>
+<BR>
+MacTeX completely configures TeX, so after installation
+it is ready to use. Go to "/Applications/TeX/Docs and Spell Utilities/READ ME FIRST.pdf" and read this short document to get started. The location "/Applications/TeX/Docs and Spell Utilities/Documents" also contains "What is installed", which lists all the components of MacTeX and their installation locations.
+<BR>
+<BR>
+MacTeX installs TeX Live, which contains TeX, LaTeX, AMS-TeX, and virtually every TeX-related style file and font. 
+TeX Live is maintained by TeX User Groups across the world.
+TeX Live is compiled from the same sources for all platforms: Macintosh, Windows, Linux, Unix.
+<BR>
+<BR>
+MacTeX also installs the GUI programs
+TeXShop, LaTeXiT, TeX Live Utility, and BibDesk.
+<BR>
+<BR>
+MacTeX installs Ghostscript, an open source version of Postscript. An optional package installs libgs, the dynamical library for Ghostscript. That library is used by only one program in TeX Live, dvisvgm. So it is not installed by default, but can be obtained using the ``custom install'' option in MacTeX.
+
+<p> X11 is an open source windowing system using by Linux machines. Most Macintosh users can ignore it.
+An open source version of X11 called XQuartz is available for the Macintosh. It can be found 
+<a href="https://www.xquartz.org"><b>here</b></a>.  If you use X11, you should update to the latest version of XQuartz, 2.8.0. This is particularly important for users with Arm machines. If you installed MacTeX before upgrading XQuartz, just install the Ghostscript piece again.
+
+<p>
+ The TeX Live programs xdvi, pdfopen, and pdfclose require X11. In addition, the Ghostscript library libgs requires X11 (but notice that dvisvgm is the only TeX Live program using it).  Ghostscript  comes with two binaries, gs-X11 and gs-noX11, where gs-X11 has support for X11 and gs-noX11 does not. When Ghostscript is first installed, a symbolic link named gs is created in /usr/local/bin. If X11 is present, gs points to gs-X11; otherwise it points to gs-noX11. On Arm machines, gs points to gs-X11 only if XQuartz 2.8.0 or higher is present.
+
+
+
+<TR><TD ALIGN='LEFT'>
+
+
+<BR>
+</div>
+<BR>
+<DIV ALIGN='center'>
+<FONT COLOR="#aa9922" SIZE="+2"><B>Updating from an Earlier MacTeX Installation</B></FONT>
+<BR>
+<BR>
+<HR WIDTH="43%">
+</DIV>
+<BR>
+
+<TABLE ALIGN='LEFT'  BORDER='0'  CELLSPACING=0 >
+If you previously installed MacTeX, you may already have your own favorite front ends and GUI programs. Perhaps, in addition, you have Ghostscript from another source such as MacPorts or HomeBrew. In these cases, it is easy to install just the pieces you need.
+Download MacTeX using the earlier link. Double click to install. Several pages of information
+will be displayed; one of the last is shown below. Click the "Customize" button to obtain a page allowing you to select one or more of "TeX Live", "Ghostscript", "Ghostscript-libgs", "GUI Applications."
+
+<BR>
+<BR>
+
+<DIV ALIGN='center'>
+<img src="Customize.png" alt="Customize" width="550" height="350" style="border:2px solid black">
+
+<BR>
+<BR>
+<BR>
+<TABLE ALIGN='LEFT'  BORDER='0'  CELLSPACING=0 >
+It is not necessary to remove the earlier TeX Live installation before installing a new one, and indeed we don't recommend that because MacTeX makes it easy to revert to the older version if the new version has a flaw. If you really need the extra space, other sections of these web pages explain how to remove older versions of MacTeX.
+
+<BR>
+<BR> 
+A small number of users like to keep several versions of TeX Live available, even when they buy a new computer running the latest macOS. This is certainly possible because older versions of TeX Live continue to work on new systems, and versions containing only Intel code run fine on Arm machines. The old version can be installed on the new computer by copying it from an older machine, or by
+obtaining it from CTAN. For details, visit the web page <a href="https://www.tug.org/texlive/acquire.html"><b>here</b></a>.
+<BR>
+<BR> 
+There is one complication. TeX Live Utility can update an old distribution to the version just before that version was retired. But this will fail for TeX Live 2019 or older versions, if installed on Big Sur or later versions of macOS. The reason is that TeX Live Utility calls the program tlmgr in the older distribution, and this program depends on various utilities in that older distribution. One of these utilities determines the operating system being run and expects a number starting with 10, like 10.5, 10.7, or 10.13. But Big Sur returns a number starting with 11. This bug was discovered and fixed in TeX Live 2020 within a week of the initial first beta of Big Sur in June, 2020, and thus long before the release of Big Sur to the public. But TUG does not fix bugs in older versions of TeX Live.
+
+<BR>
+<BR>
+</div>
+<BR>
+<DIV ALIGN='center'>
+<FONT COLOR="#aa9922" SIZE="+2"><B>Installation Errors</B></FONT>
+<BR>
+<BR>
+<HR WIDTH="43%">
+</DIV>
+<BR>
+Sometimes at the end of installation, the installer will report  "The installation failed
+The Installer encountered an error that caused the installation to fail. Contact the software manufacturer for assistance."
+
+<p>
+In almost all cases, this error is caused by a faulty download. There is an easy way to check this. Go to /Applications/Utilities and run Terminal. Type
+<dd>
+<dl>     md5
+</dd>
+and a space. Then drag the install package icon "MacTeX.pkg" and drop it on the Terminal window.
+Push RETURN. Terminal will print a message and then a long item with letters and numbers.
+Compare this number to the MD5 sum at the top of this page just under the MacTeX.pkg link.
+If the two numbers are different, your download was defective and you <em>must</em> download again.
+If you downloaded with a third party browser, we recommend trying Safari for the new download.
+
+<!--
+<p>
+The md5 number is very long to make the odds infinitesimal that an authentic version and a defective copy will produce the same number.
+Md5 numbers are used systematically through TUG and CTAN. MacTeX is created on a single machine
+and uploaded to TUG, but then the md5 number of the original is compared with the md5 number of the upload. Later MacTeX is moved from the TUG server to a large number of CTAN servers across the world, but after each of these moves, the md5 numbers are checked. Thus it is essentially impossible that a particular server has a defective copy of MacTeX. In case of trouble, it is
+essential to check md5, since MacTeX support staff will ask about it before any troubleshooting. 
+
+
+<p>
+Some users with download problems report success with the torrent network listed just below
+the download link at the top of this page, so if this method is familiar to you, give it a try.
+-->
+
+<p>
+If you are having trouble downloading MacTeX, note that the download link
+ points to a "multiplexer" site which parcels out requests to various up-to-date CTAN mirrors. Occasionally users have trouble getting the package from this multiplexer. In that case, choose a specific mirror on this <a href="./mirrorpage.html"><b>mirror page</b>.</a>
+<BR>
+
+<p>
+If you are still unable to download MacTeX-2021 after trying several specific mirrors, and your md5 sum is always incorrect, there is almost nothing we can do to help. The TeX User Group does not run the distribution servers; they are maintained by an entirely separate organization called CTAN. Complaining to us that your download always fails is a waste of time.
+<BR>
+<BR>
+MacTeX is a very large package. If your network is noisy, you might want to try downloading
+and installing BasicTeX. See <a href="./morepackages.html"><b>Smaller Download</b></a>.
+BasicTeX is very much smaller, and yet has most files, fonts, and programs to process TeX,
+so this is a rapid way to get a working TeX. BasicTeX need not be uninstalled before
+installing MacTeX, so once you convince yourself that our packages work, you can return to the
+main task of installing MacTeX. TUG strongly recommends the full MacTeX for most users, including
+beginners, 
+
+<BR>
+<BR>
+So far, we've given alternatives for bad downloads. But if your download has the correct md5
+sum, and you still get a message that installation failed, it is time to click "MacTeX Installer Support" at the bottom of this page and ask for help.
+
+<BR>
+</div>
+<BR>
+<DIV ALIGN='center'>
+<FONT COLOR="#aa9922" SIZE="+2"><B>Updating Various Pieces After Installation</B></FONT>
+<BR>
+<BR>
+<HR WIDTH="43%">
+</DIV>
+<BR>
+
+
+<TABLE ALIGN='LEFT'  BORDER='0'  CELLSPACING=0 >
+TeX Live 2021 and the various GUI programs installed by MacTeX are up to date as of April, 2021. But various pieces may have been updated since then. Each of our GUI programs has a menu item called "Check for Updates." Select this item to update the program to the current version. The TeX Live command line files are updated daily. To install these updates, use TeX Live Utility in /Applications/TeX.
+
+ 
+<!--
+
+<p> We are looking for people to test a fixed xdvi. This requires a knowledge of how to create a dvi file with TeX, and how to display
+it in XQuartz with xdvi. Please don't test unless you pass these requirements. To test, rename the current xdvi-xaw with the new one
+supplied below. After this replacement, xdvi should fail with XQuartz 2.7.8. Update to XQuartz 2.7.9. Then xdvi should work again. We are
+particularly interested in the results on operating systems between Snow Leopard and El Capitan, because the intermediate systems have
+not been tested. Send results to 
+
+Richard Koch, 
+Email: &lt;
+  <A HREF="mailto:koch@uoregon.edu">
+koch@uoregon.edu
+</A> &gt; 
+
+<p> If you want to test, download  <a href="./xdvi-xaw"><b>xdvi-xaw</b></a>
+
+<p> Install by opening Terminal in /Applications/Utilities. In Terminal, change directory to /usr/local/texlive/2016/bin/x86_64-darwin.
+Issue the commands
+<dl>
+<dd> sudo mv xdvi-xaw xdvi-xaw-old
+<dd> open .
+</dl>
+and then drag the new xdvi-xaw file to the resulting directory in the Finder. Check that the permissions and owner of this
+file agree with the permissions and owner of similar files in the directory.
+-->
+
+
+<BR>
+</div>
+<BR>
+<DIV ALIGN='center'>
+<FONT COLOR="#aa9922" SIZE="+2"><B>TeX Live DVD</B></FONT>
+<BR>
+<BR>
+<HR WIDTH="43%">
+</DIV>
+<BR>
+
+
+<TR><TD ALIGN='LEFT'>
+Free copies of TeX Live are available over the internet, but this can be problematic if your
+internet connection is unstable. Members of the TeX User Group (TUG) receive a free DVD containing the full TeX Live for all common platforms. TUG also sells this DVD to others. For details, click on the TUG icon at top right.
+
+<BR>
+<BR>
+
+
+</div></div>
+
+
+<BR><BR><BR>
+<table valign='bottom' align="left">
+<tr><td valign='bottom'>
+<small>
+<br>
+<br>
+<a href='./acknowledgments.html'><i>Acknowledgments</i></a> ...</small>  
+<br>
+<font COLOR="#887700">
+<i><b>Happy TeXing on Mac OS X </i>!</b> 
+</font>
+</td></tr></table>
+<table align='right' valign='bottom'>
+<tr><td align='center' valign='bottom'>
+<a href='./donate.html'>
+<small><i>Donate</i></small>
+<br><img border='0' align='center' src='./images/TeXLionRight-button.jpg'>&nbsp;
+</a> 
+</td></tr></table>
+<br clear='all'>
+<br>
+
+<hr>
+<small>
+<a href="./support/emailform/index.html">MacTeX Installer Support</a></small>
+
+</body></html>
+
+
+
